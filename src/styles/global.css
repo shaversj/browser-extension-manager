@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Noto Sans Variable';
+  src: url('/fonts/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans: 'Noto Sans Variable', sans-serif;
+  /* Neutral */
+  --color-neutral-900: #091540;
+  --color-neutral-800: #202535;
+  --color-neutral-700: #2F364B;
+  --color-neutral-600: #553B68;
+  --color-neutral-300: #C6C6C6;
+  --color-neutral-200: #D6E2F5;
+  --color-neutral-100: #EEEEEE;
+  --color-neutral-0:   #FBFDFE;
+
+  /* Red */
+  --color-red-400: #F25C54;
+  --color-red-500: #DE4840;
+  --color-red-700: #C7231A;
+
+  /* Gradients */
+  --gradient-light: linear-gradient(180deg, #EBF2FC 0%, #EEFBF9 100%);
+  --gradient-dark: linear-gradient(180deg, #04091B 0%, #091540 100%);
+}
+
+.text-display-lg {
+  @apply text-[2.125rem] leading-[100%] tracking-[-0.0625rem] font-bold;
+}
+
+.text-heading-md {
+  @apply text-[1.25rem] leading-[120%] tracking-[-0.0125rem] font-bold;
+}
+
+.text-body-lg {
+  @apply text-[1.25rem] leading-[140%] tracking-[-0.01875rem] font-normal;
+}
+
+.text-body-lg-medium {
+  @apply text-[1.25rem] leading-[140%] tracking-[-0.01875rem] font-medium;
+}
+
+.text-body-sm {
+  @apply text-[1rem] leading-[140%] tracking-[-0.03125rem] font-normal;
+}
+
+.text-body-sm-medium {
+  @apply text-[1rem] leading-[140%] tracking-[-0.03125rem] font-medium;
+}
