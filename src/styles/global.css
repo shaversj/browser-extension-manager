@@ -29,26 +29,30 @@
   --gradient-dark: linear-gradient(180deg, #04091B 0%, #091540 100%);
 }
 
-.text-display-lg {
+.shadow-card {
+  @apply shadow-[0px_2px_2px_rgba(194,206,225,0.2),0px_1px_5px_1px_rgba(194,206,225,0.22)];
+}
+
+.text-preset-1 {
   @apply text-[2.125rem] leading-[100%] tracking-[-0.0625rem] font-bold;
 }
 
-.text-heading-md {
+.text-preset-2 {
   @apply text-[1.25rem] leading-[120%] tracking-[-0.0125rem] font-bold;
 }
 
-.text-body-lg {
+.text-preset-3 {
   @apply text-[1.25rem] leading-[140%] tracking-[-0.01875rem] font-normal;
 }
 
-.text-body-lg-medium {
+.text-preset-4 {
   @apply text-[1.25rem] leading-[140%] tracking-[-0.01875rem] font-medium;
 }
 
-.text-body-sm {
+.text-preset-5 {
   @apply text-[1rem] leading-[140%] tracking-[-0.03125rem] font-normal;
 }
 
-.text-body-sm-medium {
+.text-preset-6 {
   @apply text-[1rem] leading-[140%] tracking-[-0.03125rem] font-medium;
 }
