@@ -10,18 +10,18 @@ const relativeToSrc = path.join("/src", image.replace(/^\.\/assets\//, "assets/"
 <div
   class="bg-neutral-0 shadow-card flex h-[200px] w-full max-w-[343px] flex-col rounded-[20px] border border-neutral-200 p-5 md:max-w-[346px] lg:max-w-[382px]"
 >
-  <div class="flex flex-1 min-h-0 items-start gap-x-4 overflow-hidden">
+  <div class="flex min-h-0 flex-1 items-start gap-x-4 overflow-hidden">
     <img src={relativeToSrc} alt={alt} class="" />
     <div class="flex flex-col overflow-hidden">
-      <h1 class="text-preset-2 text-neutral-900 truncate">{title}</h1>
-      <p class="text-preset-5 pt-2 text-neutral-500 truncate text-wrap">{description}</p>
+      <h1 class="text-preset-2 truncate text-neutral-900">{title}</h1>
+      <p class="text-preset-5 truncate pt-2 text-wrap text-neutral-500">{description}</p>
     </div>
   </div>
 
-  <div class="flex items-center shrink-0 justify-between">
+  <div class="flex shrink-0 items-center justify-between">
     <button class="text-preset-6 rounded-full border border-neutral-300 px-4 py-2 text-neutral-900">
       Remove
     </button>
-    <Toggle client:load />
+    <Toggle isActive={isActive} client:load />
   </div>
 </div>

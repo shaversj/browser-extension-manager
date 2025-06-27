@@ -2,15 +2,16 @@ import { useState } from "react";
 import { Switch } from "@headlessui/react";
 
 type ToggleProps = {
-  // enabled?: boolean;
-  setEnabled?: (enabled: boolean) => void;
+  isActive?: boolean;
+  //setEnabled?: (enabled: boolean) => void;
 };
 
-export default function Toggle() {
-  const [enabled, setEnabled] = useState(false);
+export default function Toggle({ isActive = false }: ToggleProps) {
+  const [enabled, setEnabled] = useState(isActive ? true : false);
 
   return (
     <Switch
+      //checked={enabled}
       checked={enabled}
       onChange={setEnabled}
       className="group inline-flex h-[20px] w-[36px] items-center rounded-full bg-gray-200 transition data-checked:bg-red-700"
