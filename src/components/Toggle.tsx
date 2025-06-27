@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
 
+type ToggleProps = {
+  // enabled?: boolean;
+  setEnabled?: (enabled: boolean) => void;
+};
+
 export default function Toggle() {
   const [enabled, setEnabled] = useState(false);
 
