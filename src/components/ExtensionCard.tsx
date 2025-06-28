@@ -4,7 +4,7 @@ import { Switch } from "@headlessui/react";
 export default function ExtensionCard({
   id,
   name,
-  logoLocation: image,
+  logoLocation,
   description,
   isActive = false,
   toggleHandler,
@@ -18,7 +18,7 @@ export default function ExtensionCard({
   toggleHandler: (id: number) => void;
   removeHandler: (id: number) => void;
 }) {
-  const relativeToSrc = "/src/" + image.replace(/^\.\/assets\//, "assets/").replace(/^\//, "");
+  //const relativeToSrc = "/src/" + image.replace(/^\.\/assets\//, "assets/").replace(/^\//, "");
   const [enabled, setEnabled] = useState(isActive);
 
   const onChangeHandler = () => {
@@ -29,7 +29,7 @@ export default function ExtensionCard({
   return (
     <div className="bg-neutral-0 shadow-card flex h-[200px] w-full max-w-[343px] flex-col rounded-[20px] border border-neutral-200 p-5 md:max-w-[346px] lg:max-w-[382px]">
       <div className="flex min-h-0 flex-1 items-start gap-x-4 overflow-hidden">
-        <img src={relativeToSrc} alt={name} className="" />
+        <img src={logoLocation} alt={name} className="" />
         <div className="flex flex-col overflow-hidden">
           <h1 className="text-preset-2 truncate text-neutral-900">{name}</h1>
           <p className="text-preset-5 truncate pt-2 text-wrap text-neutral-500">{description}</p>
