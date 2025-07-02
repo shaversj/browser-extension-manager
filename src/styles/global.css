@@ -13,7 +13,7 @@
   --color-neutral-900: #091540;
   --color-neutral-800: #202535;
   --color-neutral-700: #2F364B;
-  --color-neutral-600: #553B68;
+  --color-neutral-600: #545868;
   --color-neutral-300: #C6C6C6;
   --color-neutral-200: #D6E2F5;
   --color-neutral-100: #EEEEEE;
@@ -28,6 +28,8 @@
   --gradient-light: linear-gradient(180deg, #EBF2FC 0%, #EEFBF9 100%);
   --gradient-dark: linear-gradient(180deg, #04091B 0%, #091540 100%);
 }
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 .shadow-card {
   @apply shadow-[0px_2px_2px_rgba(194,206,225,0.2),0px_1px_5px_1px_rgba(194,206,225,0.22)];

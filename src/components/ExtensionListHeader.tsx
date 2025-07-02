@@ -12,8 +12,8 @@ export default function ExtensionListHeader({
   filterChangeHandler: (filter: FilterOption) => void;
 }) {
   return (
-    <div className="flex justify-between pb-8">
-      <h1 className="text-preset-1 text-neutral-900">{title}</h1>
+    <div className="flex flex-col items-center gap-y-6 pb-8 md:flex-row md:justify-between md:gap-y-0">
+      <h1 className="text-preset-1 dark:text-neutral-0 text-neutral-900">{title}</h1>
       <div className="flex gap-x-3">
         <FilterButton
           onPress={() => filterChangeHandler("All")}

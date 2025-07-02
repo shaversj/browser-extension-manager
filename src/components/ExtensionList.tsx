@@ -37,7 +37,7 @@ export default function ExtensionList() {
         selectedFilter={selectedFilter}
         filterChangeHandler={onFilterChange}
       />
-      <div className="grid auto-cols-auto grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid auto-cols-auto grid-cols-1 justify-items-center gap-3 md:grid-cols-2 lg:grid-cols-3">
         {filteredCards.map((item) => (
           <ExtensionCard
             key={item.id}
