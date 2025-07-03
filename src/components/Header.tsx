@@ -6,7 +6,7 @@ import sunIcon from "../assets/images/icon-sun.svg";
 import { useState } from "react";
 
 export default function Header() {
-  const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
+  const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(true);
 
   const toggleDarkMode = () => {
     document.documentElement.setAttribute("data-theme", isDarkModeEnabled ? "" : "dark");
