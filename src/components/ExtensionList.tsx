@@ -8,7 +8,7 @@ export default function ExtensionList() {
   const { filtered, filter, toggle, remove, changeFilter } = useExtensions(initialData);
 
   return (
-    <div>
+    <div className={"min-h-screen"}>
       <ExtensionListHeader
         title={"Extension List"}
         selectedFilter={filter}
