@@ -39,12 +39,14 @@ export default function ExtensionCard({
 
       <div className="flex shrink-0 items-center justify-between">
         <button
+          type="button"
           onClick={() => removeHandler(id)}
           className="text-preset-6 hover:text-neutral-0 dark:text-neutral-0 cursor-pointer rounded-full border border-neutral-300 px-4 py-2 text-neutral-900 transition-colors duration-200 hover:bg-red-700 dark:border-neutral-600"
         >
           Remove
         </button>
         <Switch
+          aria-label={"Toggle Extension"}
           checked={enabled}
           onChange={() => onChangeHandler()}
           className="group inline-flex h-[20px] w-[36px] cursor-pointer items-center rounded-full bg-gray-200 transition data-checked:bg-red-700 dark:bg-neutral-600 dark:data-checked:bg-red-400"
