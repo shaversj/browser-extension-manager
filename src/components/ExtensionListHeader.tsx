@@ -1,4 +1,4 @@
-import type { FilterOption } from "./ExtensionList.tsx";
+import type { FilterOption } from "../hooks/useExtensions.tsx";
 import FilterButton from "./FilterButton.tsx";
 
 export default function ExtensionListHeader({
