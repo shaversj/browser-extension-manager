@@ -10,7 +10,7 @@ export default function ExtensionList() {
   return (
     <div className={"min-h-screen"}>
       <ExtensionListHeader
-        title={"Extension List"}
+        title={"Extensions List"}
         selectedFilter={filter}
         filterChangeHandler={changeFilter}
       />
