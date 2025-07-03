@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+import logoLight from "../assets/images/logo.svg";
+import logoDark from "../assets/images/logo-dark.png";
+import moonIcon from "../assets/images/icon-moon.svg";
+import sunIcon from "../assets/images/icon-sun.svg";
+---
+
+<header>
+  <div
+    class="bg-neutral-0 flex items-center justify-between rounded-[20px] px-3 py-[12.5px] md:px-4 md:py-[16.5px] dark:bg-neutral-800"
+  >
+    <img src={logoLight.src} alt="Moon Icon" class="dark:hidden" />
+    <img src={logoDark.src} alt="Sun Icon" class="hidden h-[41px] dark:block" />
+    <button
+      id="themeToggle"
+      class="grid size-[50px] cursor-pointer place-items-center rounded-[12px] bg-neutral-100 dark:bg-neutral-700"
+    >
+      <img src={moonIcon.src} alt="Moon Icon" class="dark:hidden" />
+      <img src={sunIcon.src} alt="Sun Icon" class="hidden dark:block" />
+    </button>
+  </div>
+</header>
+
+<script is:inline>
+  if (window.localStorage.getItem("theme") === "light") {
+    document.documentElement.setAttribute("data-theme", "");
+  } else if (window.localStorage.getItem("theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  }
+
+  const handleToggleClick = () => {
+    if (document.documentElement.getAttribute("data-theme") === "dark") {
+      document.documentElement.setAttribute("data-theme", "");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
+
+  document.getElementById("themeToggle")?.addEventListener("click", handleToggleClick);
+</script>
