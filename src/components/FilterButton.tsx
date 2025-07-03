@@ -1,4 +1,4 @@
-import type { FilterOption } from "./ExtensionList.tsx";
+import type { FilterOption } from "../hooks/useExtensions.tsx";
 
 export default function FilterButton({
   onPress,
